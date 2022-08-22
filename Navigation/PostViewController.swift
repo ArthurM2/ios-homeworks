@@ -1,5 +1,5 @@
 //
-//  profileViewController.swift
+//  PostViewController.swift
 //  Navigation
 //
 //  Created by a.malginov on 22.08.2022.
@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class ProfileViewController: UIViewController {
+class PostViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemRed
+        self.navigationItem.title = "Заголовок поста"
     }
 }

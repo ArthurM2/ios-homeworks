@@ -16,8 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
 
-        let profileController = UINavigationController(rootViewController: profileViewController())
-        let feedController = UINavigationController(rootViewController: feedViewController())
+        let profileController = UINavigationController(rootViewController: ProfileViewController())
+        let feedController = UINavigationController(rootViewController: FeedViewController())
+        let postController = PostViewController()
 
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [
@@ -25,11 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ]
         tabBarController.viewControllers?.enumerated().forEach {
             $1.tabBarItem.title = $0 == 0 ? "profile" : "feed"
-            $1.tabBarItem.image = $0 == 0 ? UIImage(systemName: "folder") : UIImage(systemName: "calendar")
+            $1.tabBarItem.image = $0 == 0 ? UIImage(systemName: "person") : UIImage(systemName: "house")
         }
 
-        tabBarController.tabBar.tintColor = UIColor.white
-        tabBarController.tabBar.backgroundColor = UIColor.lightGray
+        tabBarController.tabBar.tintColor = UIColor.systemBlue
+        tabBarController.tabBar.backgroundColor = UIColor.white
 
         self.window?.rootViewController = tabBarController
         self.window?.makeKeyAndVisible()
