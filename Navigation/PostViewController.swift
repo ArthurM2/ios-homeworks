@@ -10,6 +10,7 @@ class PostViewController: UIViewController {
     }
 
     @objc private func dismissSelf() {
-        let navVC = UINavigationController(rootViewController: <#T##UIViewController#>)
+        let alert = UINavigationController(rootViewController: InfoViewController())
+        present(alert, animated: true)
     }
 }

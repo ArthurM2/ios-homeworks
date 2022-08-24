@@ -28,6 +28,5 @@ class FeedViewController: UIViewController {
         let vc = PostViewController()
         vc.title = post.title
         self.navigationController?.pushViewController(vc, animated: true)
-        print("button tapped")
     }
 }
