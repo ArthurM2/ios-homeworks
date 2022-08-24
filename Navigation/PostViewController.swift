@@ -1,17 +1,15 @@
-//
-//  PostViewController.swift
-//  Navigation
-//
-//  Created by a.malginov on 22.08.2022.
-//
-
 import Foundation
 import UIKit
 
 class PostViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Заголовок поста"
+        self.view.backgroundColor = .systemMint
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info"), style: .plain, target: self, action: #selector(dismissSelf))
+    }
+
+    @objc private func dismissSelf() {
+        let navVC = UINavigationController(rootViewController: <#T##UIViewController#>)
     }
 }
