@@ -3,8 +3,6 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
-    private let alertButton = UIButton()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -14,9 +12,11 @@ class InfoViewController: UIViewController {
 
     private func alertButton() {
         title = "Info"
-
-        alertButton.setTitle("Alert", for: .normal)
+        let alertButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         view.addSubview(alertButton)
+        
+        alertButton.setTitle("Alert", for: .normal)
+        alertButton.center = view.center
         alertButton.backgroundColor = .white
         alertButton.setTitleColor(.black, for: .normal)
         alertButton.frame = CGRect(x: 100, y: 100, width: 200, height: 52)
