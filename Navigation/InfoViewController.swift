@@ -9,6 +9,10 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .systemOrange
+        alertButton()
+    }
+
+    private func alertButton() {
         title = "Info"
 
         alertButton.setTitle("Alert", for: .normal)
