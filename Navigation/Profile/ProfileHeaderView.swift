@@ -42,7 +42,7 @@ class ProfileHeaderView: UIView {
         statusButton.layer.cornerRadius = 8 // поставил не по тз, потому что макет сильно отличается. Похоже что там радиус вообще 12, а не 4 как указано. Поставил среднее значение
 
 //        self.setupShadowButton()
-        statusButton.layer.masksToBounds = true
+        statusButton.layer.masksToBounds = false
         statusButton.layer.shadowOffset = CGSize(width: 4, height: 4)
         statusButton.layer.shadowRadius = 4
         statusButton.layer.shadowPath = nil
