@@ -41,7 +41,6 @@ class ProfileHeaderView: UIView {
         statusButton.layer.masksToBounds = true
         statusButton.layer.cornerRadius = 8 // поставил не по тз, потому что макет сильно отличается. Похоже что там радиус вообще 12, а не 4 как указано. Поставил среднее значение
 
-//        self.setupShadowButton()
         statusButton.layer.masksToBounds = false
         statusButton.layer.shadowOffset = CGSize(width: 4, height: 4)
         statusButton.layer.shadowRadius = 4
@@ -58,6 +57,20 @@ class ProfileHeaderView: UIView {
         print("check \(statusLabel.text)")
     }
 
+    private lazy var statusTextField: UITextField = {
+        let statusTextField = UITextField(frame: CGRect(x: 180, y: 160, width: 202, height: 50))
+        statusTextField.placeholder = "Thinking..."
+        statusTextField.layer.cornerRadius = 8
+        statusTextField.layer.masksToBounds = true
+        statusTextField.backgroundColor = .white
+        statusTextField.textColor = .black
+        statusTextField.layer.borderColor = UIColor.black.cgColor
+        statusTextField.layer.borderWidth = 1
+        statusTextField.font = UIFont(name: "HelveticaNeue-Regular", size: 14)
+
+        return statusTextField
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
@@ -66,14 +79,6 @@ class ProfileHeaderView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-//    private func setupShadowButton() {
-//        self.layer.masksToBounds = true
-//        self.layer.shadowOffset = CGSize(width: 4.0, height: 4.0)
-//        self.layer.shadowRadius = 4.0
-//        self.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//        self.layer.shadowOpacity = 0.7
-//    }
 
     private func setupView() {
         self.backgroundColor = .lightGray
