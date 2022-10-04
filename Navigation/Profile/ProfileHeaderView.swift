@@ -27,14 +27,14 @@ class ProfileHeaderView: UIView {
     private lazy var statusLabel: UILabel = {
         let statusLabel = UILabel(frame: CGRect(x: 180, y: 103, width: 200, height: 30))
 
-        statusLabel.text = "status for test"
+        statusLabel.text = ""
         statusLabel.textColor = .gray
         statusLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 14) // устанавливаем размер текста
         return statusLabel
     }()
 
     private lazy var showStatusButton: UIButton = {
-        let statusButton = UIButton(frame: CGRect(x: 16, y: 154, width: 382, height: 50))
+        let statusButton = UIButton(frame: CGRect(x: 16, y: 300, width: 382, height: 50)) // y: 154
 
         statusButton.setTitle("Show status", for: .normal) // установка тайтла кнопки
         statusButton.backgroundColor = .systemBlue // бекграунд кнопки
@@ -54,7 +54,8 @@ class ProfileHeaderView: UIView {
     }()
 
     @objc private func buttonPressed() {
-        print("check \(statusLabel.text)")
+        guard statusText != nil && statusText != "" else { return }
+        statusLabel.text = statusText
     }
 
     private lazy var statusTextField: UITextField = {
@@ -67,9 +68,14 @@ class ProfileHeaderView: UIView {
         statusTextField.layer.borderColor = UIColor.black.cgColor
         statusTextField.layer.borderWidth = 1
         statusTextField.font = UIFont(name: "HelveticaNeue-Regular", size: 14)
+        statusTextField.addTarget(self, action: #selector(statusTextChanged), for: .editingChanged)
 
         return statusTextField
     }()
+
+    @objc private func statusTextChanged() {
+        statusText = statusTextField.text
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -86,6 +92,7 @@ class ProfileHeaderView: UIView {
         self.addSubview(usernameLabel)
         self.addSubview(statusLabel)
         self.addSubview(showStatusButton)
+        self.addSubview(statusTextField)
     }
 
 
