@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Navigation
-//
-//  Created by a.malginov on 15.08.2022.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -16,7 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
 
-        let profileController = UINavigationController(rootViewController: ProfileViewController())
+        let profileController = UINavigationController(rootViewController: ProfileHeaderViewController())
         let feedController = UINavigationController(rootViewController: FeedViewController())
 
         let tabBarController = UITabBarController()

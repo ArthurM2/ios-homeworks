@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A93FC22A28B357DC00F4068D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93FC22928B357DC00F4068D /* ProfileViewController.swift */; };
 		A93FC22C28B357EB00F4068D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93FC22B28B357EB00F4068D /* FeedViewController.swift */; };
+		A951953D28E365D10055169A /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951953C28E365D10055169A /* ProfileHeaderView.swift */; };
+		A951953F28E366030055169A /* ProfileHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951953E28E366030055169A /* ProfileHeaderViewController.swift */; };
+		A98E4D6928E8C175008C6299 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98E4D6828E8C175008C6299 /* Profile.swift */; };
 		A992761728AAC73E00B1D2DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992761628AAC73E00B1D2DC /* AppDelegate.swift */; };
 		A992761928AAC73E00B1D2DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992761828AAC73E00B1D2DC /* SceneDelegate.swift */; };
 		A992761B28AAC73E00B1D2DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992761A28AAC73E00B1D2DC /* ViewController.swift */; };
@@ -20,8 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A93FC22928B357DC00F4068D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A93FC22B28B357EB00F4068D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		A951953C28E365D10055169A /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		A951953E28E366030055169A /* ProfileHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewController.swift; sourceTree = "<group>"; };
+		A98E4D6828E8C175008C6299 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A992761328AAC73E00B1D2DC /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A992761628AAC73E00B1D2DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A992761828AAC73E00B1D2DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A951953B28E3658F0055169A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A951953C28E365D10055169A /* ProfileHeaderView.swift */,
+				A951953E28E366030055169A /* ProfileHeaderViewController.swift */,
+				A98E4D6828E8C175008C6299 /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		A992760A28AAC73E00B1D2DC = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +78,7 @@
 		A992761528AAC73E00B1D2DC /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				A951953B28E3658F0055169A /* Profile */,
 				A992761628AAC73E00B1D2DC /* AppDelegate.swift */,
 				A992761828AAC73E00B1D2DC /* SceneDelegate.swift */,
 				A992761A28AAC73E00B1D2DC /* ViewController.swift */,
@@ -71,7 +86,6 @@
 				A992762128AAC74000B1D2DC /* LaunchScreen.storyboard */,
 				A992762428AAC74000B1D2DC /* Info.plist */,
 				A9C9A0B628B6349E009FFE67 /* Post.swift */,
-				A93FC22928B357DC00F4068D /* ProfileViewController.swift */,
 				A93FC22B28B357EB00F4068D /* FeedViewController.swift */,
 				A9E9FA2E28B375C600A90B1C /* PostViewController.swift */,
 				A9C9A0B828B67762009FFE67 /* InfoViewController.swift */,
@@ -150,10 +164,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9E9FA2F28B375C600A90B1C /* PostViewController.swift in Sources */,
+				A98E4D6928E8C175008C6299 /* Profile.swift in Sources */,
 				A93FC22C28B357EB00F4068D /* FeedViewController.swift in Sources */,
 				A992761B28AAC73E00B1D2DC /* ViewController.swift in Sources */,
 				A992761728AAC73E00B1D2DC /* AppDelegate.swift in Sources */,
-				A93FC22A28B357DC00F4068D /* ProfileViewController.swift in Sources */,
+				A951953D28E365D10055169A /* ProfileHeaderView.swift in Sources */,
+				A951953F28E366030055169A /* ProfileHeaderViewController.swift in Sources */,
 				A9C9A0B728B6349E009FFE67 /* Post.swift in Sources */,
 				A9C9A0B928B67762009FFE67 /* InfoViewController.swift in Sources */,
 				A992761928AAC73E00B1D2DC /* SceneDelegate.swift in Sources */,
