@@ -33,7 +33,7 @@ class ProfileHeaderView: UIView {
         return statusLabel
     }()
 
-    private lazy var showStatusButton: UIButton = {
+    private lazy var setStatusButton: UIButton = {
         let statusButton = UIButton(frame: CGRect(x: 16, y: 300, width: 382, height: 50)) // y: 154
 
         statusButton.setTitle("Show status", for: .normal) // установка тайтла кнопки
@@ -91,7 +91,7 @@ class ProfileHeaderView: UIView {
         self.addSubview(avatarImageView)
         self.addSubview(usernameLabel)
         self.addSubview(statusLabel)
-        self.addSubview(showStatusButton)
+        self.addSubview(setStatusButton)
         self.addSubview(statusTextField)
     }
 
